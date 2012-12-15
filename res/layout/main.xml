@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    >
+    <!-- WELCOME MESSAGE -->
+    <TextView
+        android:id="@+id/welcome_message"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+
+        android:text="@string/welcome_message"
+        />
+    <!-- YOUR_WORD -->
+    <TextView
+        android:id="@+id/your_word"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/welcome_message"
+
+        android:layout_centerHorizontal="true"
+
+
+        />
+    <!-- GUESSED_LETTERS (STATIC TEXT)-->
+    <TextView
+        android:id="@+id/guessed_letters"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/your_word"
+        android:layout_alignParentLeft="true"
+
+        android:text="@string/guessed_letters"
+            />
+    <!-- GUESS_LETTERS LIST -->
+    <TextView
+        android:id="@+id/lstGuessedLetters"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/your_word"
+        android:layout_toRightOf="@id/guessed_letters"
+
+            />
+    <!-- WRONGS (STATIC TEXT) -->
+    <TextView
+        android:id="@+id/wrongs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/guessed_letters"
+        android:layout_alignParentLeft="true"
+
+        android:text="@string/wrongs"
+            />
+    <!-- intWRONGS (TOTAL WRONG GUESSES) -->
+    <TextView
+        android:id="@+id/intWrongs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/guessed_letters"
+        android:layout_toRightOf="@id/wrongs"
+        android:layout_alignParentRight="true"
+
+            />
+    <!-- INPUT_TEXT_BOX -->
+    <EditText
+        android:id="@+id/edit_character"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/wrongs"
+        android:layout_alignParentLeft="true"
+
+        android:layout_toLeftOf="@+id/btn_enter"
+        android:hint="@string/edit_message"/>
+    <!-- BUTTON -->
+    <Button
+        android:id="@id/btn_enter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/wrongs"
+        android:layout_alignParentRight="true"
+
+        android:text="@string/button_enter"
+        android:onClick="guess"
+        />
+
+
+
+</RelativeLayout>
+

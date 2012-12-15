@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">HangMan</string>
+    <string name="edit_message">Enter a Letter...</string>
+    <string name="button_enter">Enter</string>
+    <string name="welcome_message">Welcome to Hang Man</string>
+    <string name="wrongs">Wrong(Max 8):</string>
+    <string name="yourword">testwordone</string>
+    <string name="intwrongs">6</string>
+    <string name="guessed_letters">Guessed Letters:</string>
+
+
+</resources>
