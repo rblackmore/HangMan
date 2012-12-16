@@ -16,7 +16,7 @@
         android:textStyle="bold"
 
         android:text="@string/welcome_message"
-        />
+		android:textSize="25dp" android:gravity="center_horizontal"/>
     <!-- YOUR_WORD -->
     <TextView
         android:id="@+id/your_word"
@@ -35,38 +35,38 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/your_word"
         android:layout_alignParentLeft="true"
-
         android:text="@string/guessed_letters"
-            />
+		android:textIsSelectable="true"
+		android:textSize="20dp"/>
     <!-- GUESS_LETTERS LIST -->
     <TextView
         android:id="@+id/lstGuessedLetters"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/your_word"
+        android:layout_below="@id/guessed_letters"
+        android:layout_alignParentLeft="true"
         android:layout_toRightOf="@id/guessed_letters"
-
-            />
+		android:textSize="20dp"
+        />
     <!-- WRONGS (STATIC TEXT) -->
     <TextView
         android:id="@+id/wrongs"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/guessed_letters"
+        android:layout_below="@id/lstGuessedLetters"
         android:layout_alignParentLeft="true"
-
         android:text="@string/wrongs"
-            />
+		android:textSize="20dp"/>
     <!-- intWRONGS (TOTAL WRONG GUESSES) -->
     <TextView
         android:id="@+id/intWrongs"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/guessed_letters"
+        android:layout_below="@id/lstGuessedLetters"
         android:layout_toRightOf="@id/wrongs"
         android:layout_alignParentRight="true"
-
-            />
+		android:textSize="20dp"
+        />
     <!-- INPUT_TEXT_BOX -->
     <EditText
         android:id="@+id/edit_character"
@@ -74,7 +74,6 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/wrongs"
         android:layout_alignParentLeft="true"
-
         android:layout_toLeftOf="@+id/btn_enter"
         android:hint="@string/edit_message"/>
     <!-- BUTTON -->

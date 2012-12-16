@@ -1,11 +1,9 @@
-package com.example.controllers;
+package com.rblackmore.hangman.controllers;
 
 import android.content.Context;
 import android.content.res.AssetManager;
-import android.provider.UserDictionary;
 
 import java.io.*;
-import java.nio.channels.Selector;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;

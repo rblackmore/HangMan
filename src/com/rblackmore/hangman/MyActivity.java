@@ -1,17 +1,20 @@
-package com.example;
+package com.rblackmore.hangman;
 
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
-import com.example.controllers.HangManController;
+import com.rblackmore.hangman.controllers.HangManController;
 
 import java.io.IOException;
 
-public class MyActivity extends Activity {
+public class MyActivity extends Activity implements TextWatcher
+{
 
     HangManController hmc;
     TextView your_word;
@@ -33,9 +36,8 @@ public class MyActivity extends Activity {
         txtWrongs = (TextView) findViewById(R.id.intWrongs);
         txtGuessedLetters = (TextView) findViewById(R.id.lstGuessedLetters);
 
-        your_word.setTextSize(20);
-        welcome_message.setTextSize(25);
-
+        EditText searchLetter = (EditText) findViewById(R.id.edit_character);
+		searchLetter.addTextChangedListener( this );
 
         try {
             hmc = new HangManController(getApplicationContext());
@@ -64,7 +66,10 @@ public class MyActivity extends Activity {
     }
 
     public void guess(View view) {
+		guess();
+	}
 
+	public void guess() {
         EditText searchLetter = (EditText) findViewById(R.id.edit_character);
         String strSearchLetter = searchLetter.getText().toString();
 
@@ -164,4 +169,26 @@ public class MyActivity extends Activity {
     }
 
 
+	@Override
+	public void beforeTextChanged( CharSequence s, int start, int count, int after )
+	{
+	}
+
+	@Override
+	public void onTextChanged( CharSequence s, int start, int before, int count )
+	{
+		EditText searchLetter = (EditText) findViewById(R.id.edit_character);
+
+		if (searchLetter.getText().length() > 0) {
+			guess( );
+		}
+
+
+
+	}
+
+	@Override
+	public void afterTextChanged( Editable s )
+	{
+	}
 }
