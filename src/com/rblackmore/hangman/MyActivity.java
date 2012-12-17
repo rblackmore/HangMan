@@ -92,6 +92,7 @@ public class MyActivity extends Activity implements TextWatcher
         txtWrongs.setText(intWrong);
         String strGuessedLetters = hmc.getStrGuessedLetters();
         txtGuessedLetters.setText(strGuessedLetters);
+
         //Check for win/lose state
         if (hmc.testWin()) {
             //you win message
