@@ -5,7 +5,7 @@
     android:layout_height="fill_parent"
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
-    >
+        >
     <!-- WELCOME MESSAGE -->
     <TextView
         android:id="@+id/welcome_message"
@@ -75,19 +75,8 @@
         android:layout_below="@id/wrongs"
         android:layout_alignParentLeft="true"
         android:layout_toLeftOf="@+id/btn_enter"
-        android:hint="@string/edit_message"/>
+        android:hint="@string/edit_message" android:layout_alignRight="@+id/welcome_message"/>
     <!-- BUTTON -->
-    <Button
-        android:id="@id/btn_enter"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/wrongs"
-        android:layout_alignParentRight="true"
-
-        android:text="@string/button_enter"
-        android:onClick="guess"
-        />
-
 
 
 </RelativeLayout>
