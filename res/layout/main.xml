@@ -27,7 +27,7 @@
         android:layout_centerHorizontal="true"
 
 
-        />
+        android:textSize="20dp"/>
     <!-- GUESSED_LETTERS (STATIC TEXT)-->
     <TextView
         android:id="@+id/guessed_letters"
